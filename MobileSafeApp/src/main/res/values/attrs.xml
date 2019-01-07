@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--二维码扫描样式-->
+    <declare-styleable name="QRCodeView">
+        <!-- 扫描框距离扫描视图顶部的距离，默认值为90dp -->
+        <attr name="qrcv_topOffset" format="dimension|reference" />
+        <!-- 扫描框边角线的宽度，默认值为3dp -->
+        <attr name="qrcv_cornerSize" format="dimension|reference" />
+        <!-- 扫描框边角线的长度，默认值为20dp -->
+        <attr name="qrcv_cornerLength" format="dimension|reference" />
+        <!-- 扫描框边角线的颜色，默认值为@android:color/white -->
+        <attr name="qrcv_cornerColor" format="color|reference" />
+        <!-- 扫描框的宽度，默认值为200dp -->
+        <attr name="qrcv_rectWidth" format="dimension|reference" />
+        <!-- 除去扫描框，其余部分阴影颜色，默认值为#33FFFFFF -->
+        <attr name="qrcv_maskColor" format="color|reference" />
+        <!-- 扫描线的宽度，默认值为1dp -->
+        <attr name="qrcv_scanLineSize" format="dimension|reference" />
+        <!-- 扫描线的颜色，默认值为@android:color/white -->
+        <attr name="qrcv_scanLineColor" format="color|reference" />
+        <!-- 扫描线距离左右边框的间距，默认值为0dp -->
+        <attr name="qrcv_scanLineHorizontalMargin" format="dimension|reference" />
+        <!-- 是否显示默认的图片扫描线，默认值为false -->
+        <attr name="qrcv_isShowDefaultScanLineDrawable" format="boolean" />
+        <!-- 扫描线的图片资源，默认值为空 -->
+        <attr name="qrcv_customScanLineDrawable" format="reference" />
+        <!-- 扫描边框的宽度，默认值为1dp -->
+        <attr name="qrcv_borderSize" format="dimension|reference" />
+        <!-- 扫描边框的颜色，默认值为@android:color/white -->
+        <attr name="qrcv_borderColor" format="color|reference" />
+        <!-- 扫描线从顶部移动到底部的动画时间，默认值为1000 -->
+        <attr name="qrcv_animTime" format="integer" />
+    </declare-styleable>
+
+    <!--土豪金样式-->
+    <declare-styleable name="ShimmerView">
+        <attr name="reflectionColor" format="color"/>
+    </declare-styleable>
+
+    <!--音乐播放器-->
+    <string-array name="res_names">
+        <item>http://file.bmob.cn/M03/7F/F0/oYYBAFdFYh-AE_J1AI_wXc_rRqI724.mp3</item>
+        <item>http://file.bmob.cn/M03/01/1F/oYYBAFb4h0uAQLufAE8BpAeKTGE542.mp3</item>
+        <item>http://file.bmob.cn/M03/80/B6/oYYBAFdHmiWABL4BADxZu1-oiaw235.mp3</item>
+        <item>http://file.bmob.cn/M03/46/32/oYYBAFcfB32AJzVZAFK420C4ZHM831.mp3</item>
+        <item>http://file.bmob.cn/M03/46/31/oYYBAFcfBwaAKJ4xAE6zxHaI3uM740.mp3</item>
+        <item>http://file.bmob.cn/M03/19/96/oYYBAFcEqXiAEqtYADz8HHZWiM4012.mp3</item>
+    </string-array>
+    <string-array name="dis_names">
+        <item>意外 - 薛之谦</item>
+        <item>小孩 - 薛之谦</item>
+        <item>时光倒回 - 郑恺</item>
+        <item>一个人的北京 - 好妹妹乐队</item>
+        <item>可不可以爱我 - 卢学睿</item>
+        <item>陪你度过漫长的岁月 - 陈奕迅</item>
+    </string-array>
+
+    <!--页面右下角 图标动画-->
+    <declare-styleable name="GooeyMenu">
+        <attr name="no_of_menu" format="integer" />
+        <attr name="fab_radius" format="dimension" />
+        <attr name="menu_radius" format="dimension" />
+        <attr name="gap_between_menu_fab" format="dimension" />
+        <attr name="menu_drawable" format="reference" />
+    </declare-styleable>
+
+    <!--ArcMenu-->
+    <attr name="fromDegrees" format="float|reference" />
+    <attr name="toDegrees" format="float|reference" />
+    <attr name="childSize" format="dimension|reference" />
+    <declare-styleable name="ArcLayout">
+        <attr name="fromDegrees"/>
+        <attr name="toDegrees"/>
+        <attr name="childSize"/>
+    </declare-styleable>
+    <declare-styleable name="ArcMenu">
+        <attr name="fromDegrees"/>
+        <attr name="toDegrees"/>
+        <attr name="childSize"/>
+    </declare-styleable>
+    <declare-styleable name="RayLayout">
+        <attr name="leftHolderWidth" format="dimension" />
+    </declare-styleable>
+
+    <!-- circleimageview -->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+    </declare-styleable>
+
+    <!--smooth pic-->
+    <declare-styleable name="card">
+        <attr name="itemMarginTop" format="dimension" />
+        <attr name="bottomMarginTop" format="dimension" />
+        <attr name="yOffsetStep" format="dimension" />
+        <attr name="widthHeightRate" format="float" />
+    </declare-styleable>
+
+</resources>

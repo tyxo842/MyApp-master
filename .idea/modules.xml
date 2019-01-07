@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JNChartLib/JNChartLib.iml" filepath="$PROJECT_DIR$/JNChartLib/JNChartLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MobileSafeApp/MobileSafeApp.iml" filepath="$PROJECT_DIR$/MobileSafeApp/MobileSafeApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyApp-master.iml" filepath="$PROJECT_DIR$/MyApp-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShortcutBadger/ShortcutBadger.iml" filepath="$PROJECT_DIR$/ShortcutBadger/ShortcutBadger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crop/crop.iml" filepath="$PROJECT_DIR$/crop/crop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pgirllibrary/pgirllibrary.iml" filepath="$PROJECT_DIR$/pgirllibrary/pgirllibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qrcode/qrcode.iml" filepath="$PROJECT_DIR$/qrcode/qrcode.iml" />
+    </modules>
+  </component>
+</project>

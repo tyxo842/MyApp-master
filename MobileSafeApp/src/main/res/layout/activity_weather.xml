@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="tyxo.functions.weather.WeatherActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/request"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="查看天气温度" />
+
+        <com.jn.chart.charts.LineChart
+            android:id="@+id/weatherChart"
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
+
+        <com.jn.chart.charts.LineChart
+            android:id="@+id/weatherChart_rain"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
+
+    </LinearLayout>
+</ScrollView>
+

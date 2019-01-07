@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/layout_dialog_radius"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/camera_tv_camera"
+            style="@style/dialog_camera_item"
+            android:text="拍摄照片(可裁剪)" />
+
+        <TextView
+            android:id="@+id/camera_tv_photo"
+            style="@style/dialog_camera_item"
+            android:text="选择已有照片(可裁剪)"/>
+
+        <TextView
+            android:id="@+id/camera_tv_camera_nusub"
+            style="@style/dialog_camera_item"
+            android:text="拍摄照片"/>
+
+        <TextView
+            android:id="@+id/camera_tv_photo_nusub"
+            style="@style/dialog_camera_item"
+            android:text="选择已有照片"/>
+    </LinearLayout>
+
+</RelativeLayout>

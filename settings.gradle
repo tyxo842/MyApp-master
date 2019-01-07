@@ -1,0 +1,5 @@
+include ':MobileSafeApp', ':qrcode'
+include ':ShortcutBadger'
+include ':JNChartLib'
+include ':pgirllibrary'
+include 'crop'

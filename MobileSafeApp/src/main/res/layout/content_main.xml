@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tyxo.mobilesafe.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <tyxo.mobilesafe.widget.FocusableTextView
+        android:id="@+id/main_up_tv_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:text="@string/scroll_tv"
+        />
+
+    <tyxo.mobilesafe.widget.FocusableTextView
+        android:id="@+id/main_up_tv_2"
+        android:layout_below="@id/main_up_tv_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:text="@string/scroll_tv"
+        />
+
+    <tyxo.mobilesafe.widget.FocusableTextView
+        android:id="@+id/main_up_tv_1"
+        android:layout_below="@id/main_up_tv_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:text="@string/spannablestring_tv"
+        />
+    <!--ellipsize 滚动模式
+    focusable(针对物理键)与focusableInTouchMode(针对手指)要同时设置
+    marqueeRepeatLimit设置文本一直滚动-->
+
+    <tyxo.mobilesafe.widget.dragGridView.DragGridView
+        android:visibility="gone"
+        android:layout_below="@id/main_up_tv_1"
+        android:id="@+id/main_DragGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="4"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <!--<com.romainpiel.shimmer.ShimmerTextView-->
+    <TextView
+        android:layout_below="@id/main_DragGridView"
+        android:id="@+id/tv_main_up_recycler_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@drawable/seloctor_btn_commit_unradian"
+        android:textColor="@drawable/seloctor_tv_unradian"
+        android:text="点击调整到 StaggeredGridActivity"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRL_recyclerActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_main_up_recycler_1"
+        android:layout_marginTop="20dp">
+
+        <!--<android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_main_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/order_bg_f0f3f5"
+            android:dividerHeight="10dp"
+            />-->
+        <tyxo.mobilesafe.widget.recyclerdivider.WrapRecyclerView
+            android:id="@+id/rv_main_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/order_bg_f0f3f5"
+            android:dividerHeight="10dp"
+            />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

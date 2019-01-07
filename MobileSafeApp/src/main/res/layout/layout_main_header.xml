@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<tyxo.mobilesafe.widget.AutoClearEditText-->
+        <EditText
+            android:id="@+id/et_main_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入内容"
+            android:layout_marginBottom="10dp"
+            />
+        <!--将软键盘搜索功能改为"搜索"两个字
+        android:imeOptions="actionSearch"
+        android:singleLine="true"-->
+
+    </LinearLayout>
+
+</RelativeLayout>

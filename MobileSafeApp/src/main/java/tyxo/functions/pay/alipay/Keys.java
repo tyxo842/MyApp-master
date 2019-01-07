@@ -1,0 +1,14 @@
+package tyxo.functions.pay.alipay;
+
+/**
+ * Created on 2016/1/15.
+ */
+public final class Keys {
+    // 合作身份者id，以2088开头的16位纯数字
+    public static final String DEFAULT_PARTNER = "2088111600171855";
+    // 收款支付宝账号
+    public static final String DEFAULT_SELLER = "mobilepay@ecarechina.com";
+    // 商户私钥，自助生成
+    public static final String PRIVATE = "MIICdQIBADANBgkqhkiG9w0BAQEFAASCAl8wggJbAgEAAoGBAKpFGf5Q6EQANIV40m3uirvw3Fo+BImV7IElgM89zXGR0gLLkNCDQsaPdfe5w25prVgPdF8qyHvwjX8V9TDAHsEzaY/7frG7l53QIPqrxmN6SqctT5l6kMOV5asnffO188c133m6E5f3In1ZU1gmhFUZJ0XxbeTooAC/0i3dNLO1AgMBAAECgYAmKxVXmAVo8O7VGK97KyT4Wlba99oGiZAZpzGHw1/hXIHKVJ2i0DnQzunv3Tl8772G5vf8OVf1yIe/fEmZYwfBg4aS51R65O5+LGnEeuFiRSHY0LTVM078aDqKGu2k4AorMhk0E1YtFWh2VJwfgrvCb/nTNUtYkBWgdfElF7Q84QJBAOF4SFICG5R0PXd7KR+ZZ+Q0dFcDA4k7Qb0mLESyDBbR8ndWnFbBASHRpoi1EsDnOIp3PzZUdyrIwrlDSL51IH0CQQDBU1yBOg0ymPZzzELoTrLgpiKfIr+WZ1+Z/87PJQ7IU1m/3pQWGvEa9N8FaPbGZBeGploTWbtUli7SD8Y+mL2ZAkAXifEy7plmhEQuhyMh82gPQRKsStpBp3gTgTq56USt1TlVECu+OuQdXb/fIdhVX05d1lk5GNRgGRmLMeUUTTIZAkAmrP2poKp5P962JdwQy4W/qZzthy8a8M1Qaru99yTw8LPYzbeEgJlRkkF3vJr575ZBStBkZKQ0dOMjBSLc7QOpAkBXipkNO+09ztKNq1CIiD/QRMYc6Qj89+xqO/tbZOLCU3pwubV2wvU9Lrsfmze534/w5gAqDpxaAS4Yb/ctMX5j";
+    public static final String PUBLIC = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCnxj/9qwVfgoUh/y2W89L6BkRAFljhNhgPdyPuBV64bfQNN1PjbCzkIM6qRdKBoLPXmKKMiFYnkd6rAoprih3/PrQEB/VsW8OoM8fxn67UDYuyBTqA23MML9q1+ilIZwBC2AQ2UBVOrFXfFl75p6/B5KsiNG9zpgmLCUYuLkxpLQIDAQAB";
+}

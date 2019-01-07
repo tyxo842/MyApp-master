@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/main_header_gv_item_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/selector_order_list_item_radian_2">
+
+        <ImageView
+            android:id="@+id/main_header_gv_item_iv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/main_header_gv_item_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待做功能..."/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:layout_anchor="@id/main_header_gv_item_ll"
+            app:layout_anchorGravity="bottom|right|end"
+            android:src="@drawable/ic_online_questioner"
+            android:layout_margin="15dp"
+            android:clickable="true"/>
+        <!--锚点 指定+位置 layout_anchor layout_anchorGravity-->
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/main_header_gv_item_tv_tianchong"
+        android:layout_width="58dp"
+        android:layout_height="58dp"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/main_header_gv_item_iv_num"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@id/main_header_gv_item_tv_tianchong"
+        android:scaleType="centerCrop"
+        android:background="@drawable/selector_main_grid_iv_num"
+        android:src="@drawable/ic_online_questioner"
+        />
+
+</RelativeLayout>

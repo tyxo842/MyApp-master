@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tyxo.mobilesafe.widget.snakemenu.TumblrRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity4_snake_menu_trl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/denglubg" />
+
+</tyxo.mobilesafe.widget.snakemenu.TumblrRelativeLayout>

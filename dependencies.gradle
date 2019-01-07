@@ -1,0 +1,8 @@
+ext.versions = [
+        compileSdkVersion : 25,
+        minSdkVersion : 16,
+        targetSdkVersion : 22,
+        versionCode : 807,
+        versionName : '8.0.7',
+        supportLibVersion : "25.0.0"
+]

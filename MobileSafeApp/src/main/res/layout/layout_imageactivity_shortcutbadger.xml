@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--设置 初始进入界面 不获取焦点-->
+    <LinearLayout
+        android:focusable="true" android:focusableInTouchMode="true"
+        android:layout_width="0px" android:layout_height="0px">
+        <requestFocus />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/imageActivity_tv_package"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <tyxo.mobilesafe.widget.AutoClearEditText
+        android:id="@+id/imageActivity_et_numinput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageActivity_tv_package"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/imageActivity_btn_setBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageActivity_et_numinput"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="设置 badge" />
+
+    <Button
+        android:id="@+id/imageActivity_btn_removeBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageActivity_btn_setBadge"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="清除 badge" />
+
+</RelativeLayout>

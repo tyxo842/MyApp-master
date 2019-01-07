@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:id="@+id/act_recycler_rl">
+
+    <TextView
+        android:id="@+id/tv_recycler_up_recycler_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:clickable="true"
+        android:background="@drawable/seloctor_btn_commit_unradian"
+        android:textColor="@color/white"
+        android:text="eventBus 发送 数据"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/recycler_swipeRL_recyclerActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_recycler_up_recycler_1"
+        android:layout_marginTop="20dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_recycler_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/order_bg_f0f3f5"
+            android:dividerHeight="10dp"
+            />
+        <!--<tyxo.mobilesafe.widget.recyclerdivider.WrapRecyclerView
+            android:id="@+id/rv_main_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/order_bg_f0f3f5"
+            android:dividerHeight="10dp"
+            />-->
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

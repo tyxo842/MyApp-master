@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/layout_dialog_radius"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:textColor="@color/order_text_font_h_color_333333"
+            android:text="填写发票信息"
+            android:textSize="16sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textColor="@color/order_text_font_h_color_333333"
+                android:text="发票号"
+                />
+
+            <EditText
+                android:id="@+id/bill_num"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:textColor="@color/order_text_font_color_666666"
+                android:hint="请填写发票信息"
+                android:textSize="14sp"
+                android:gravity="left|center"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/selector_order_list_item_radian_2"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="备注"
+                android:textColor="@color/order_text_font_h_color_333333"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                />
+
+            <!--<EditText
+                android:id="@+id/remarks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_order_list_item_radian_2"
+                android:layout_marginLeft="@dimen/order_list_magin_10"
+                android:minHeight="80dp"
+                android:textColor="@color/order_text_font_color_666666"
+                android:hint="填写备注信息"
+                android:layout_weight="8"
+                />-->
+            <EditText
+                android:id="@+id/remarks"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="请填写备注信息"
+                android:textColor="@color/order_text_font_color_666666"
+                android:textSize="14sp"
+                android:gravity="left|center"
+                android:background="@drawable/selector_order_list_item_radian_2"
+                android:lineSpacingMultiplier="1.5"
+                android:minHeight="80dp"
+                android:padding="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            >
+            <Button
+                android:id="@+id/negativeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@drawable/selector_dialog_blue"
+                android:textColor="@drawable/selector_dialog_white"
+                android:text="取消"
+                />
+
+            <Button
+                android:id="@+id/positiveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/selector_dialog_blue"
+                android:textColor="@drawable/selector_dialog_white"
+                android:text="确定"
+                />
+            <!--android:textColor="@color/theme_dialog_title"
+                android:background="@drawable/selector_order_list_item_radian_2"-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

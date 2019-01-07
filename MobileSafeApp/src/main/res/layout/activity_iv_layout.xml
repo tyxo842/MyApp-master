@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/order_bg_f0f3f5"
+    android:padding="10dp"
+    android:fitsSystemWindows="true"
+    >
+    <ScrollView
+        android:id="@+id/activity_iv_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_iv_layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:clickable="true"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="接收消息: "/>
+
+            <TextView
+                android:id="@+id/tv_iv_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="20dp"
+                android:clickable="true"
+                android:background="@drawable/seloctor_btn_commit_unradian"
+                android:text="点击切换"/>
+
+            <tyxo.mobilesafe.widget.TouchImageView
+                android:id="@+id/image_tiv_picture"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_iv_layout_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="100dp"
+                android:background="#999999"/>
+
+            <include layout="@layout/layout_imageactivity_shortcutbadger"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

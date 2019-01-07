@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="test_injection_framework">注入框架测试</string>
+
+    <!-- error -->
+
+    <string name="volley_timeout_error">请求超时</string>
+    <string name="volley_parse_error">解析失败</string>
+    <string name="volley_network_error">网络请求失败</string>
+    <string name="volley_no_connect_error">请重新连接网络</string>
+    <string name="volley_authfailure_error">认证失败</string>
+    <string name="volley_client_error">客户端请求错误</string>
+    <string name="volley_server_error">远程服务器错误</string>
+    <string name="volley_requested_range_not_satisfiable">服务器不能满足客户在请求中指定的Range头</string>
+    <string name="volley_request_fail_error">网络请求失败</string>
+
+
+</resources>

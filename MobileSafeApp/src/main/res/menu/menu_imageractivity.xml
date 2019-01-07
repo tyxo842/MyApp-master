@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@android:drawable/ic_menu_always_landscape_portrait"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/abc_ic_menu_selectall_mtrl_alpha"
+        android:title="hello_world">
+        <item
+            android:id="@+id/image_action_1"
+            android:icon="@drawable/abc_ic_menu_cut_mtrl_alpha"
+            android:title="跳转到recyclerActivity"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/image_action_weather"
+            android:icon="@drawable/abc_ic_menu_selectall_mtrl_alpha"
+            android:title="查看天气(暂只温度)"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/image_action_smooth_pic"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="流畅的动画探探"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/image_action_drag_pic"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="可拖动的Pic"
+            app:showAsAction="never" />
+    </item>
+
+</menu>

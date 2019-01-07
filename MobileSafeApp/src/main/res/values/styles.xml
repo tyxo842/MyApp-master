@@ -1,0 +1,212 @@
+<resources
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ApplicationAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- 状态栏颜色 如果放在了toolbar里面,记得配合AppTheme.NoActionBar(mainActivity),否则会全屏(RecyclerActivity)-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--<item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>-->
+        <!--<item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>-->
+        <!-- toolbar（actionbar）背景颜色 -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="colorControlActivated">@color/colorPrimary</item>-->
+        <!-- 底部导航栏的颜色 -->
+        <!--<item name="android:navigationBarColor" tools:targetApi="lollipop">@color/navigationBarColor</item>-->
+    </style>
+
+    <!--状态栏设置-->
+    <style name="AppThemeScan" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>
+        <!-- toolbar（actionbar）背景颜色 -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <!-- 底部导航栏的颜色 -->
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/navigationBarColor</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--自定义 menu 弹窗 使用:在toolBar里面设置 android:theme="@style/Theme.ToolBar.Menu"-->
+    <!--<style name="Theme.ToolBar.Menu" parent="Theme.AppCompat.Light.NoActionBar">-->
+    <style name="Theme.ToolBar.Menu" parent="AppTheme.PopupOverlay">
+        <item name="android:colorBackground">#4f4f4f</item><!--设置弹窗背景颜色-->
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18sp</item>
+        <!--用于替换菜单的三个小白点, 换成自己的图片-->
+        <!--<item name="actionOverflowButtonStyle">@style/ActionButton.Overflow.Menu</item>-->
+        <!--用于控制menu 弹出的位置, 位于toolbar的下面,而不是上面-->
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+        <!--用于修改item 默认的分割线-->
+        <item name="android:dropDownListViewStyle">@style/dropDownStyle</item>
+        <item name="dropDownListViewStyle">@style/dropDownStyle</item>
+        <!--用于控件 popmenu 的宽度-->
+        <!--<item name="android:width">150dp</item>-->
+    </style>
+    <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+    </style>
+    <style name="ActionButton.Overflow.Menu" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@mipmap/icon_user</item>
+    </style>
+    <style name="dropDownStyle" parent="android:style/Widget.Holo.ListView.DropDown"><!--用于修改popmenu的分割线-->
+        <!--<item name="android:listSelector">可添加选中背景颜色</item>-->
+        <item name="android:divider">#908d8d8d</item>
+        <item name="android:dividerHeight">0.5dp</item>
+    </style>
+    <style name="popupTextProfile" parent="@style/TextAppearance.Widget.AppCompat.ExpandedMenu.Item">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Dialog 对话框风格 -->
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--Dialog 主体-->
+    <style name="my_dialog_bg" parent="CustomProgressDialog">
+        <!--<item name="android:state_pressed">false</item>-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!--自定义dialog-->
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!--配套 toolbar 使用的 无actionbar 主题 状态栏颜色 全屏-->
+    <style name="MyToolbarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <!-- menu的item点击效果 返回键通过getchildAt(0) 继承自全屏-->
+    <style name="MyToolbarThemeSelector" parent="MyToolbarTheme">
+        <item name="android:actionBarItemBackground">@drawable/seloctor_btn_commit_unradian</item>
+    </style>
+
+    <!-- recyclerView divider 样式 代码设置的状态栏颜色,如果parent是AppTheme.NoActionBar,只需ViewUtil.setStateBar() -->
+    <style name="MyRecyclerMainTheme" parent="AppTheme.NoActionBar">
+        <!--<item name="android:listDivider">@drawable/divider_bg</item>-->
+    </style>
+
+    <!--RecyclerActivity-->
+    <!--配套 toolbar 使用的 , 状态栏颜色样式设置处未起作用,并全屏-->
+    <style name="MyRecyclerActivityTheme" parent="AppThemeScan">
+        <item name="colorPrimaryDark">@color/bg_green</item>    <!--状态栏 颜色-->
+        <item name="colorPrimary">@color/bg_green</item>        <!--toolbar 颜色-->
+    </style>
+
+    <!--ImageViewerActivity-->
+    <!--配套 toolbar 使用  状态栏颜色设置要代码设置,不全屏要ViewUtil.setStateBarHeight(this,(ViewGroup)findViewById(R.id.rl));-->
+    <style name="MyAciticity1Theme" parent="MyToolbarTheme">
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">@color/bg_green</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>
+        <!-- toolbar（actionbar）背景颜色 -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <!-- 底部导航栏的颜色 -->
+        <!--<item name="android:navigationBarColor" tools:targetApi="lollipop">@color/navigationBarColor</item>--><!--会变成白色-->
+    </style>
+
+
+    <!--PrettyGirls 全屏-->
+    <style name="AppTheme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <!--跳转动画-->
+    <!--left right in out-->
+    <style name="ActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+    <style name="GirlsHome" parent="MyToolbarTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--fuli-->
+    <style name="help_a_tv">
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#404040</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="help_q_tv">
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="HeaderTitleTextAppearance"
+        parent="TextAppearance.AppCompat">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/dark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TitleTextAppearance"
+        parent="TextAppearance.AppCompat">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/dark</item>
+    </style>
+
+    <style name="SummaryTextAppearance"
+        parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
+
+    <!--底部导航栏 activity6-->
+    <style name="BottomTheme" parent="AppTheme.NoActionBar">
+        <!-- 底部导航栏的颜色 -->
+        <!--<item name="android:navigationBarColor" tools:targetApi="lollipop">@color/transparent</item>--><!--会变成白色-->
+        <!-- 状态栏颜色 -->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>-->
+    </style>
+
+</resources>

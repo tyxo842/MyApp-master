@@ -1,0 +1,60 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        maven{url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven{url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+
+        jcenter()
+        maven { url "https://jitpack.io" }
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+//因为子依赖了不同的v7,这里设置统一版本
+//subprojects {
+//    project.configurations.all {
+//        resolutionStrategy.eachDependency { details ->
+//            if (details.requested.group == 'com.android.support'
+//                    && !details.requested.name.contains('multidex')) {
+//                details.useVersion "$supportlib_version"
+//            }
+//        }
+//    }
+//}
+//
+//ext {
+//    supportlib_version = '27.+'
+//}
+
+ext {
+    // Sdk and tools
+    minSdkVersion = 16
+    targetSdkVersion = 22
+    compileSdkVersion = 26
+//    buildToolsVersion = '26.0.2'
+
+    // App dependencies
+    supportLibraryVersion = '26.0.2'
+//    retrofitVersion = '2.3.0'
+//    okHttp3Version = '3.9.0'
+}
+

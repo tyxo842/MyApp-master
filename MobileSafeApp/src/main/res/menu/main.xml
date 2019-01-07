@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/icon_user"
+        android:orderInCategory="100"
+        android:title="跳转到RecyclerActivity"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings_fix"
+        android:icon="@drawable/icon_user"
+        android:orderInCategory="100"
+        android:title="打补丁"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings_test"
+        android:icon="@drawable/icon_user"
+        android:orderInCategory="100"
+        android:title="打开另一个mm"
+        app:showAsAction="never" />
+
+</menu>

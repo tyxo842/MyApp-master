@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ Copyright (C) 2008 ZXing authors
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<resources>
+
+    <item name="decode" type="id" />
+    <item name="decode_failed" type="id" />
+    <item name="decode_succeeded" type="id" />
+    <item name="launch_product_query" type="id" />
+    <item name="quit" type="id" />
+    <item name="restart_preview" type="id" />
+    <item name="return_scan_result" type="id" />
+
+    <!-- system  chenhn 2015-4-20 15:22 -->
+    <item name="checkbox" type="id" />
+    <item name="checktextview" type="id" />
+    <item name="imageview" type="id" />
+    <item name="linearlayout" type="id" />
+    <item name="progressbar" type="id" />
+    <item name="pulltorefreshgridview" type="id" />
+    <item name="pulltorefreshlistview" type="id" />
+    <item name="pulltorefreshwebview" type="id" />
+    <item name="pulltorefreshscrollview" type="id" />
+    <item name="radiobutton" type="id" />
+    <item name="radiogroup" type="id" />
+    <item name="textview" type="id" />
+    <item name="edittext" type="id" />
+    <item name="button" type="id" />
+    <item name="content" type="id" />
+    <item name="listview" type="id" />
+    <item name="gridview" type="id" />
+
+    <item name="viewpager" type="id" />
+    <item name="tabpageindicator" type="id" />
+    <!-- custom chenhn 2015-4-20 15:55 -->
+    <item name="demo_btn_injection_framework" type="id" />
+    <item name="local_filename" type="id" />
+    <item name="request_url" type="id" />
+    <!-- setting -->
+    <item name="tv_account" type="id" />
+    <item name="tv_username" type="id" />
+    <item name="tv_orgname" type="id" />
+    <item name="tv_mobile" type="id" />
+    <item name="tv_telephone" type="id" />
+    <item name="tv_address" type="id" />
+    <item name="tv_zipcode" type="id" />
+    <item name="tv_version" type="id" />
+    <item name="tv_update" type="id" />
+    <item name="tv_count" type="id" />
+    <item name="tv_title" type="id" />
+    <item name="tv_time" type="id" />
+    <item name="tv_from" type="id" />
+    <item name="tv_content" type="id" />
+    <item name="tv_key" type="id" />
+    <item name="tv_value" type="id" />
+    <item name="et_title" type="id" />
+
+    <item name="et_content" type="id" />
+
+    <item name="viewholder" type="id" />
+    <item name="linear_account" type="id" />
+    <item name="linear_username" type="id" />
+    <item name="linear_orgname" type="id" />
+    <item name="linear_mobile" type="id" />
+    <item name="linear_telephone" type="id" />
+    <item name="linear_address" type="id" />
+    <item name="linear_zipcode" type="id" />
+    <item name="selected_view" type="id" />
+    <item name="tag_position" type="id" />
+    <item name="tag_item_position" type="id" />
+
+    <item name="title" type="id" />
+    <item name="header" type="id" />
+    <item name="header_image" type="id" />
+    <item name="back" type="id" />
+
+
+    <item name="action_search" type="id" />
+    <item name="action_delete" type="id" />
+    <item name="action_send" type="id" />
+    <item name="action_register" type="id" />
+    <item name="action_refresh" type="id" />
+    <item name="action_new" type="id" />
+    <item name="action_save" type="id" />
+    <item name="action_accept" type="id" />
+    <item name="action_refuse" type="id" />
+    <item name="action_camera" type="id" />
+    <item name="action_click" type="id" />
+
+    <item type="id" name="mask" />
+
+</resources>
