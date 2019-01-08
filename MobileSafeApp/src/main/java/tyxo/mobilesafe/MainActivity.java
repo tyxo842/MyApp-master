@@ -541,30 +541,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 ToastUtil.showToastS(MainActivity.this, parent.getAdapter().getItem(position).toString());
                 ToastUtil.showToastS(MainActivity.this, "点击的是 : " + position);
                 MainGVItemBean itemBean = (MainGVItemBean) parent.getAdapter().getItem(position);
-                //{"手机防盗", "骚扰拦截", "软件管理", "进程管理", "流量统计", "缓存清理"}
+                HLog.v("tyxo", itemBean.getTitle());
                 switch (itemBean.getId()) {
                     case 0:
-                        HLog.v("tyxo", itemBean.getTitle());
+                        //
                         Intent intent0 = new Intent(MainActivity.this, Aciticity1.class);
                         startActivity(intent0);
                         break;
                     case 1:
+                        //
                         Intent intent1 = new Intent(MainActivity.this, Aciticity2.class);
                         startActivity(intent1);
                         break;
                     case 2:
+                        //
                         Intent intent2 = new Intent(MainActivity.this, Aciticity3.class);
                         startActivity(intent2);
                         break;
                     case 3:
+                        //
                         Intent intent3 = new Intent(MainActivity.this, Aciticity4.class);
                         startActivity(intent3);
                         break;
                     case 4:
+                        //导航栏
                         Intent intent4 = new Intent(MainActivity.this, Aciticity5.class);
                         startActivity(intent4);
                         break;
                     case 5:
+                        //状态栏
                         Intent intent5 = new Intent(MainActivity.this, Aciticity6.class);
                         startActivity(intent5);
                         break;

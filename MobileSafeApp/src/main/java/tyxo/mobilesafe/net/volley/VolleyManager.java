@@ -31,30 +31,46 @@ import tyxo.mobilesafe.R;
 import tyxo.mobilesafe.base.AppEnv;
 import tyxo.mobilesafe.utils.log.HLog;
 
-/** Volley的管理器 */
+/**
+ * Volley的管理器
+ */
 public class VolleyManager {
 
     // ---------added by chenhn start---------
     private String VOLLEY_TAG = "volley";
-    /** 请求超时错误 VOLLEY_TIMEOUT_ERROR = 408; */
+    /**
+     * 请求超时错误 VOLLEY_TIMEOUT_ERROR = 408;
+     */
     public static int VOLLEY_TIMEOUT_ERROR = 408;
 
-    /** 解析错误 VOLLEY_PARSE_ERROR = 0x01; */
+    /**
+     * 解析错误 VOLLEY_PARSE_ERROR = 0x01;
+     */
     public static int VOLLEY_PARSE_ERROR = 0x01;
 
-    /** 无法访问错误 VOLLEY_NETWORK_ERROR = 0x02; */
+    /**
+     * 无法访问错误 VOLLEY_NETWORK_ERROR = 0x02;
+     */
     public static int VOLLEY_NETWORK_ERROR = 0x02;
 
-    /** 认证失败错误 VOLLEY_AUTHFAILURE_ERROR = 0x03; */
+    /**
+     * 认证失败错误 VOLLEY_AUTHFAILURE_ERROR = 0x03;
+     */
     public static int VOLLEY_AUTHFAILURE_ERROR = 0x03;
 
-    /** 客户端错误 VOLLEY_CLIENT_ERROR = 0x04; */
+    /**
+     * 客户端错误 VOLLEY_CLIENT_ERROR = 0x04;
+     */
     public static int VOLLEY_CLIENT_ERROR = 0x04;
 
-    /** 远程服务器错误 VOLLEY_SERVER_ERROR = 0x05; */
+    /**
+     * 远程服务器错误 VOLLEY_SERVER_ERROR = 0x05;
+     */
     public static int VOLLEY_SERVER_ERROR = 0x05;
 
-    /** 网络无连接错误 VOLLEY_NO_CONNECT_ERROR = 0x06; */
+    /**
+     * 网络无连接错误 VOLLEY_NO_CONNECT_ERROR = 0x06;
+     */
     public static int VOLLEY_NO_CONNECT_ERROR = 0x06;
 
     // ---------added by chenhn end---------
@@ -76,7 +92,9 @@ public class VolleyManager {
     private static VolleyManager mInstance;
     private static Object lock = new Object();
 
-    /** 返回VolleyManager的实例 */
+    /**
+     * 返回VolleyManager的实例
+     */
     public static VolleyManager getInstance(Context context) {
         if (mInstance == null) {
             synchronized (lock) {
@@ -96,8 +114,12 @@ public class VolleyManager {
         return mRequestQueue;
     }
 
-    /** 将请求添加到请求队列 */
-    public <T> void addToRequestQueue(Request<T> request) { getRequestQueue().add(request); }
+    /**
+     * 将请求添加到请求队列
+     */
+    public <T> void addToRequestQueue(Request<T> request) {
+        getRequestQueue().add(request);
+    }
 
     /**
      * 添加请求队列
@@ -121,20 +143,36 @@ public class VolleyManager {
      *
      * @return
      */
-    public ImageLoader getImageLoader() { return mImageLoader; }
+    public ImageLoader getImageLoader() {
+        return mImageLoader;
+    }
 
     // ---------added by chenhn start---------
 
-    /** 开始所有任务 */
-    public void start() { mRequestQueue.start(); }
+    /**
+     * 开始所有任务
+     */
+    public void start() {
+        mRequestQueue.start();
+    }
 
-    /** 停止所有任务 */
-    public void stop() { mRequestQueue.stop(); }
+    /**
+     * 停止所有任务
+     */
+    public void stop() {
+        mRequestQueue.stop();
+    }
 
-    /** 取消所有访问任务 */
-    public void cancelAll() { mRequestQueue.cancelAll(VOLLEY_TAG); }
+    /**
+     * 取消所有访问任务
+     */
+    public void cancelAll() {
+        mRequestQueue.cancelAll(VOLLEY_TAG);
+    }
 
-    /** 取消指定URL相关任务 */
+    /**
+     * 取消指定URL相关任务
+     */
     public void cancel(final String url) {
         mRequestQueue.cancelAll(new RequestQueue.RequestFilter() {
 
@@ -158,8 +196,12 @@ public class VolleyManager {
      */
 //     public boolean requestDelivered(Object url) { return  mRequestQueue.requestDelivered(url); }
 
-    /** 清除网络数据缓存 */
-    public void clear() { mRequestQueue.getCache().clear(); }
+    /**
+     * 清除网络数据缓存
+     */
+    public void clear() {
+        mRequestQueue.getCache().clear();
+    }
 
     /**
      * 发送Get请求
@@ -173,7 +215,7 @@ public class VolleyManager {
 
             @Override
             public void onResponse(JSONObject response) {
-                 HLog.i(TAG, "onResponse  response = " + response.toString());
+                HLog.i(TAG, "onResponse  response = " + response.toString());
                 if (callBack != null)
                     callBack.onResponse(response);
             }
@@ -198,13 +240,13 @@ public class VolleyManager {
      * @param url      访问url
      * @param callBack 回调接口
      */
-    public void getJsonWithHeader(String url, final VolleyCallBack<JSONObject> callBack, final Map <String,String> header) {
+    public void getJsonWithHeader(String url, final VolleyCallBack<JSONObject> callBack, final Map<String, String> header) {
         MyJsonRequest jsonObjectRequest = new MyJsonRequest(Request.Method.GET,
                 url, null, new Response.Listener<JSONObject>() {
 
             @Override
             public void onResponse(JSONObject response) {
-                 HLog.i(TAG, "onResponse  response = " + response.toString());
+                HLog.i(TAG, "onResponse  response = " + response.toString());
                 if (callBack != null)
                     callBack.onResponse(response);
             }
@@ -216,11 +258,11 @@ public class VolleyManager {
                 if (callBack != null)
                     callBack.onErrorResponse(getErrorResult(error));
             }
-        }){
+        }) {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> headers = super.getHeaders();
-                if (headers==null || headers.equals(Collections.emptyMap())) {
+                if (headers == null || headers.equals(Collections.emptyMap())) {
                     headers = new HashMap<>();
                 }
                 if (header != null || !headers.equals(Collections.emptyMap())) {
@@ -229,7 +271,7 @@ public class VolleyManager {
                         Map.Entry entry = (Map.Entry) it.next();
                         Object key = entry.getKey();
                         Object value = entry.getValue();
-                        headers.put((String)key, (String) value);
+                        headers.put((String) key, (String) value);
                     }
                 } else {
                     //headers.put("apikey","2600907be4021f9979ecc9554a4065ac");
@@ -356,7 +398,7 @@ public class VolleyManager {
 //          fileRequest.setProgressUploadListener(uploadListener);
 //          fileRequest.setTag(VOLLEY_TAG); mRequestQueue.add(fileRequest);
 //     }
-	 /**
+    /**
      * 上传文件
      *
      * @param url 上传url
@@ -429,7 +471,7 @@ public class VolleyManager {
      *
      *
      */
-     /**
+    /**
      * <pre>
      * 2. ImageLoader用法
      * 1. 创建一个RequestQueue对象。
@@ -461,7 +503,7 @@ public class VolleyManager {
      * </pre>
      *
      */
-     /**
+    /**
      * 解析volley 错误
      *
      * @param error volley 错误
@@ -622,9 +664,15 @@ public class VolleyManager {
         return result;
     }
 
-    /** 获取错误信息 */
+    /**
+     * 获取错误信息
+     */
     protected String getErrorInfo(int resid) {
-        return AppEnv.mAppContext.getResources().getString(resid);
+        if (null != AppEnv.mAppContext) {
+            return AppEnv.mAppContext.getResources().getString(resid);
+        } else {
+            return "获取了一个错误信息";
+        }
     }
     // ---------added by chenhn end---------
 }

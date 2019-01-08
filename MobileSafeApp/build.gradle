@@ -68,16 +68,20 @@ repositories {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:23.4.0'
-//implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+
+    //implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+
     //testCompile 'junit:junit:4.12'
     implementation "com.android.support:design:$rootProject.supportLibraryVersion"
-//implementation 'com.android.support:design:23.4.0'
+
+    //implementation 'com.android.support:design:23.4.0'
     implementation 'com.kymjs.rxvolley:rxvolley:1.0.1'
     implementation files('libs/volley.jar')
     implementation 'com.google.code.gson:gson:2.4'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
     implementation 'com.umeng.analytics:analytics:latest.integration'
     implementation 'com.romainpiel.shimmer:library:1.4.0'
+
     //implementation 'com.romainpiel.shimmer:library:1.4.0@aar'
     implementation project(':ShortcutBadger')
     implementation 'com.hovans.dynamicgrid:dynamicgrid:1.0.0'
@@ -85,6 +89,7 @@ dependencies {
     implementation 'org.greenrobot:eventbus:3.0.0'
     implementation files('libs/alipaySdk-20160111.jar')
     implementation 'com.oguzdev:CircularFloatingActionMenu:1.0.2'
+
     //右下角menu
 
     //Retrofit-RxJava-MPAndroidChart 显示天气
@@ -95,38 +100,55 @@ dependencies {
     implementation 'io.reactivex:rxandroid:1.1.0'
     implementation 'io.reactivex:rxjava:1.1.0'
     implementation project(':JNChartLib')
+
     //pretygirl
     implementation 'com.android.support:palette-v7:23.4.0'
     implementation 'com.android.support:cardview-v7:23.+'
     implementation 'com.jude:easyrecyclerview:4.0.2'
     implementation 'jp.wasabeef:glide-transformations:2.0.1'
     implementation project(':pgirllibrary')
+
     //fuli
+
     //compile 'io.realm:realm-android:0.87.0'
     implementation 'io.realm:realm-android:0.87.0'
-    //implementation 'com.astuetz:pagerslidingtabstrip:1.0.1'
+
     //implementation 'com.astuetz.PagerSlidingTabStrip:1.0.1'//改包名-->找不到了,改为aar
     //implementation files('pagerslidingtabstrip-1.0.1.aar')
-    implementation(name: 'pagerslidingtabstrip-1.0.1', ext: 'aar')
+//    implementation(name: 'pagerslidingtabstrip-1.0.1', ext: 'aar')
+    implementation 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    implementation 'com.github.gb-nick:PagerSlidingTabStrip:v1.0.5'
+
     implementation 'org.jsoup:jsoup:1.8.3'
     implementation files('libs/umeng-update-v2.6.0.1.jar')
+
     //流畅的图片动画效果
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     implementation 'com.facebook.rebound:rebound:0.3.8'
     implementation project(':crop')
     implementation 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
+
     //改as为2.2添加ConstraintLayout
     implementation project(':qrcode')
+
     //
-//    implementation('com.github.naman14:app-theme-engine:0.5.2@aar') {
-//        transitive = true
-//    }
+
+    //    implementation('com.github.naman14:app-theme-engine:0.5.2@aar') {
+
+    //        transitive = true
+
+    //    }
+
     //因为子依赖了不同的v7,这里设置统一版本
-//    implementation "com.android.support:appcompat-v7:$supportlib_version"//注意此处双引号
+
+    //    implementation "com.android.support:appcompat-v7:$supportlib_version"//注意此处双引号
 
     //implementation 'com.jakewharton:butterknife:8.1.0'
+
     //annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
     //provided 'org.glassfish:javax.annotation:10.0-b28'
+
 }
 
 //andResGuard {
