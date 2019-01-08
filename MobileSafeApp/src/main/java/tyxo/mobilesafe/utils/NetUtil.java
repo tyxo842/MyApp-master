@@ -19,7 +19,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
-import tyxo.mobilesafe.base.MyApp;
+import tyxo.mobilesafe.base.AppEnv;
 
 public class NetUtil {
 	/**
@@ -27,7 +27,7 @@ public class NetUtil {
 	 */
 	public static boolean CheckNetworkState() {
 
-		ConnectivityManager manager = (ConnectivityManager) MyApp.getAppContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+		ConnectivityManager manager = (ConnectivityManager) AppEnv.mAppContext.getSystemService(Context.CONNECTIVITY_SERVICE);
 
 		NetworkInfo mMobile = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
 		NetworkInfo mWifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);

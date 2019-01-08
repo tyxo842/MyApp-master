@@ -21,8 +21,6 @@ public class MyApp extends BaseApplication {
     private boolean isLogin;
     // private static PlatUser mCurrentUser;
     private static Object mCurrentUser;
-    private static MyApp singleton;
-    private static Context mContext;
     private static final String TAG = "MyApp";
     public static String AppName = "ENT_PLAT_APP";
     public static final String USER_DATA_FILE = "user_data";
@@ -36,8 +34,6 @@ public class MyApp extends BaseApplication {
         super.onCreate();
 
         AppEnv.initialize(this);
-        singleton = this;
-        mContext = getApplicationContext();
         //创建默认的ImageLoader配置参数
         ImageLoaderConfiguration configuration = ImageLoaderConfiguration.createDefault(this);
 
@@ -45,10 +41,6 @@ public class MyApp extends BaseApplication {
         ImageLoader.getInstance().init(configuration);
 
 //		startService(new Intent(getAppContext(),MonitorUserService.class));
-    }
-
-    public static MyApp getInstance() {
-        return singleton;
     }
 
     /**
@@ -84,10 +76,6 @@ public class MyApp extends BaseApplication {
 
     public void setIsLogin(boolean b) {
         isLogin = b;
-    }
-
-    public static Context getAppContext() {
-        return MyApp.mContext;
     }
 
     @Override

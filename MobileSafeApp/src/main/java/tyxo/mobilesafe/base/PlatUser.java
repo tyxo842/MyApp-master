@@ -143,9 +143,9 @@ public class PlatUser extends EntityBase implements Serializable {
                         PlatUser user = new Gson().fromJson(response.toString(), type);
                         if (user.resultCode == 200) {
 
-                            MyApp myApp = MyApp.getInstance();
+                            /*MyApp myApp = MyApp.getInstance();
                             myApp.setCurrentUser(user);
-                            myApp.setIsLogin(true);
+                            myApp.setIsLogin(true);*/
                             handler.onLoginSuccess();
                         } else {
                             HLog.i(TAG, user.resultCode + ":" + user.msg);

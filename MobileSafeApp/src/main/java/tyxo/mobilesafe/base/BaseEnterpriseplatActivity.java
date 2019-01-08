@@ -27,7 +27,6 @@ public abstract class BaseEnterpriseplatActivity extends BaseActivity implements
 
 	private ActionBar mActionBar;
 	private ImageView iv_main_back;
-	protected MyApp myApp;
 
 	/**
 	 * 自定义ActionBar 标题
@@ -80,7 +79,6 @@ public abstract class BaseEnterpriseplatActivity extends BaseActivity implements
 	@Override
 	public void initData() {
 		super.initData();
-		myApp = MyApp.getInstance();
 	}
 
 	/** 设置ActionBar */

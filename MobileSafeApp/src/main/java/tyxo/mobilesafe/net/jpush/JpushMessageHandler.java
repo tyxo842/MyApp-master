@@ -13,7 +13,6 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.LocalBroadcastManager;
 
 import tyxo.mobilesafe.R;
-import tyxo.mobilesafe.base.MyApp;
 import tyxo.mobilesafe.base.PlatUser;
 import tyxo.mobilesafe.utils.AndroidUtil;
 import tyxo.mobilesafe.utils.log.HLog;
@@ -27,7 +26,6 @@ import tyxo.mobilesafe.utils.log.HLog;
 public class JpushMessageHandler {
 
     private static String userId;
-    private MyApp myApp = new MyApp().getInstance();
 
     /**
      * 接收自定义消息
@@ -80,7 +78,7 @@ public class JpushMessageHandler {
                 .setVisibility(Notification.VISIBILITY_PRIVATE)//设置通知在锁屏界面显示的内容5.0
                 //.setContentInfo("内容信息")
                 .setPriority(Notification.PRIORITY_MAX)
-                //.setSubText("ddddd");
+        //.setSubText("ddddd");
         ;
         return builder;
     }
@@ -89,7 +87,8 @@ public class JpushMessageHandler {
      * 通知栏消息的跳转
      */
     private static void MessageOpened(Context context, Object appMessage, NotificationCompat.Builder builder) {
-        PlatUser user = (PlatUser) MyApp.getInstance().getCurrentUser();
+//        PlatUser user = (PlatUser) MyApp.getInstance().getCurrentUser();
+        PlatUser user = new PlatUser();
 
         //判断用户是否登陆
         if (null == user) {
@@ -178,7 +177,11 @@ public class JpushMessageHandler {
                     @Override
                     public void onGetMessageListInfoBymsgIdSuccess(PlatMessage platMessage) {
 
-                        *//**插入数据库 刷新列表与适配器 *//*
+                        */
+
+    /**
+     * 插入数据库 刷新列表与适配器
+     *//*
                         if (null != platMessage.getMessageDetail() && platMessage.getMessageDetail().size() > 0) {
                             HLog.i("zyw", "platMessage.getMessageDetail().size()=" + platMessage.getMessageDetail().size() + "");
                             //增加用户字段
@@ -205,7 +208,6 @@ public class JpushMessageHandler {
                     }
                 });
     }*/
-
     private static void sendBoradcast(Context context) {
         Intent intent = new Intent("PushMessageAction");
         LocalBroadcastManager.getInstance(context).sendBroadcast(intent);

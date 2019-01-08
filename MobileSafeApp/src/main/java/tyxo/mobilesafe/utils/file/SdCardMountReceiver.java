@@ -7,7 +7,7 @@ import android.content.IntentFilter;
 
 import java.util.HashSet;
 
-import tyxo.mobilesafe.base.MyApp;
+import tyxo.mobilesafe.base.AppEnv;
 
 
 /**
@@ -89,14 +89,14 @@ public class SdCardMountReceiver {
 		filter.addAction(Intent.ACTION_MEDIA_UNMOUNTED);// 扩展介质存在，但是还没有被挂载
 														// (mount)
 		filter.addDataScheme("file");// 这个很重要
-		MyApp.getAppContext().registerReceiver(sdCardMountReceiver, filter);
+		AppEnv.mAppContext.registerReceiver(sdCardMountReceiver, filter);
 		
 		isRegisteReceiver = true;
 	}
 
 	public static void unregister() {
 		if (isRegisteReceiver) {
-			MyApp.getAppContext().unregisterReceiver(sdCardMountReceiver);
+			AppEnv.mAppContext.unregisterReceiver(sdCardMountReceiver);
 			isRegisteReceiver = false;
 		}
 	}

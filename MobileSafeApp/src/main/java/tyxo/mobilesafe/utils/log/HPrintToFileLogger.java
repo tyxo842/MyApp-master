@@ -10,7 +10,7 @@ import java.io.Writer;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import tyxo.mobilesafe.base.MyApp;
+import tyxo.mobilesafe.base.AppEnv;
 
 
 /**
@@ -35,7 +35,7 @@ public class HPrintToFileLogger implements HILogger {
 
 	public void open() {
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO) {
-			logDir = MyApp.getInstance().getExternalCacheDir();
+			logDir = AppEnv.mAppContext.getExternalCacheDir();
 		} else {
 			String cacheDir = "/Android/data/"
 					+  getPackageName()
@@ -181,7 +181,7 @@ public class HPrintToFileLogger implements HILogger {
 	}
 	
 	private String  getPackageName() {
-		return MyApp.getInstance().getPackageName();
+		return AppEnv.mAppContext.getPackageName();
 	}
 
 	public void close() {

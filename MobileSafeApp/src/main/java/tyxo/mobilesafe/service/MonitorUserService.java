@@ -6,9 +6,10 @@ import android.os.Handler;
 import android.os.IBinder;
 
 import tyxo.mobilesafe.base.AppEnv;
-import tyxo.mobilesafe.base.MyApp;
 
-/** Description:监测用户状态 */
+/**
+ * Description:监测用户状态
+ */
 public class MonitorUserService extends Service {
 
     // 用户线程
@@ -43,7 +44,8 @@ public class MonitorUserService extends Service {
         public void run() {
             while (true) {
                 try {
-                    if (null == MyApp.getInstance().getCurrentUser()) {
+//                    if (null == MyApp.getInstance().getCurrentUser()) {
+                    if (null == AppEnv.mAppContext) {
                         mHandler.post(new Runnable() {
 
                             @Override
@@ -69,10 +71,12 @@ public class MonitorUserService extends Service {
         NetLoginInfo.OnLoginResultHandler handler = new NetLoginInfo.OnLoginResultHandler() {
 
             @Override
-            public void onLoginSuccess() { }
+            public void onLoginSuccess() {
+            }
 
             @Override
-            public void onLoginFailure(String msg) { }
+            public void onLoginFailure(String msg) {
+            }
         };
 
         NetLoginInfo.autoLogin(AppEnv.mAppContext, handler);

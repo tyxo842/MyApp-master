@@ -13,7 +13,6 @@ import org.json.JSONObject;
 import java.lang.reflect.Type;
 
 import tyxo.mobilesafe.ConstValues;
-import tyxo.mobilesafe.base.MyApp;
 import tyxo.mobilesafe.base.PlatUser;
 import tyxo.mobilesafe.net.volley.VolleyCallBack;
 import tyxo.mobilesafe.net.volley.VolleyErrorResult;
@@ -84,9 +83,9 @@ public class NetLoginInfo {
                         PlatUser user = new Gson().fromJson(response.toString(), type);
                         if (user.resultCode == 200) {
 
-                            MyApp myApp = MyApp.getInstance();
+                            /*MyApp myApp = MyApp.getInstance();
                             myApp.setCurrentUser(user);
-                            myApp.setIsLogin(true);
+                            myApp.setIsLogin(true);*/
                             handler.onLoginSuccess();
                         } else {
                             HLog.i(TAG, user.resultCode + ":" + user.msg);

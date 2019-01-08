@@ -17,7 +17,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import tyxo.mobilesafe.R;
-import tyxo.mobilesafe.base.MyApp;
+import tyxo.mobilesafe.base.AppEnv;
 
 
 public class Utility {
@@ -289,7 +289,7 @@ public class Utility {
 			case "20":
 				return "部分紧急";
 			case "30":
-				tv.setTextColor(MyApp.getAppContext().getResources().getColor(R.color.order_text_color_ea5967));
+				tv.setTextColor(AppEnv.mAppContext.getResources().getColor(R.color.order_text_color_ea5967));
 				return "紧急";
 		}
 		return "";
@@ -301,7 +301,7 @@ public class Utility {
 			case "":
 				return "";
 			case "10":
-				tv.setTextColor(MyApp.getAppContext().getResources().getColor(R.color.order_text_color_ea5967));
+				tv.setTextColor(AppEnv.mAppContext.getResources().getColor(R.color.order_text_color_ea5967));
 				return "急需";
 			case "20":
 				return "不急需";
@@ -312,9 +312,9 @@ public class Utility {
 	// 根据传入的状态,设置字体颜色
 	public static void setTextColor(String degree, TextView tv ){
 		if ("紧急".equals(degree)){
-			tv.setTextColor(MyApp.getAppContext().getResources().getColor(R.color.order_text_color_ea5967));
+			tv.setTextColor(AppEnv.mAppContext.getResources().getColor(R.color.order_text_color_ea5967));
 		}else {
-			tv.setTextColor(MyApp.getAppContext().getResources().getColor(R.color.order_text_font_h_color_333333));
+			tv.setTextColor(AppEnv.mAppContext.getResources().getColor(R.color.order_text_font_h_color_333333));
 		}
 	}
 
